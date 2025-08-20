@@ -5,9 +5,9 @@ import os
 import contextlib
 from voz import hablar
 
-def ejecutar_comando(accion, parametro=""):
+def ejecutar_comando(accion, aplicacion, parametro=""):
     """Ejecuta una acción según lo que diga el modelo."""
-    if accion == "buscar_youtube":
+    if accion == "buscar" and aplicacion== "youtube":
         query = urllib.parse.quote(parametro)
         webbrowser.open(f"https://www.youtube.com/results?search_query={query}")
         hablar(f"Buscando {parametro} en YouTube")

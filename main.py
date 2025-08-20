@@ -7,8 +7,10 @@ if __name__ == "__main__":
         comando = escuchar_comando()
         if comando:
             resultado = interpretar_comando(comando)
+            print(resultado)
             accion = resultado["accion"]
+            programa = resultado["aplicacion"]
             parametro = resultado["parametro"]
 
-            print(f"🤖 Acción: {accion}, Parámetro: {parametro}")
-            ejecutar_comando(accion, parametro)
+            print(f"🤖 Acción: {accion}, Aplicacion: {programa}, Parámetro: {parametro}")
+            ejecutar_comando(accion, programa, parametro)
